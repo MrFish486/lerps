@@ -1,0 +1,43 @@
+body, html {
+	margin: 0px;
+	padding: 0px;
+}
+
+* {
+	font-family: Helvetica;
+}
+
+div.column, div.row {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+div.column *, div.row * {
+	opacity: 0;
+	font-size: 24px;
+	transition: 0.5s;
+	overflow: hidden;
+}
+
+div.column:hover *, div.row:hover * {
+	opacity: 1;
+}
+
+div.picker {
+	transition: 0.5s;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.transparent {
+	opacity: 0;
+}
+
+div.column * {
+	transform: rotate(270deg);
+}
